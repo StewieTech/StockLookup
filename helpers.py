@@ -40,7 +40,8 @@ def lookup(symbol):
 
     # Contact API 
     try:
-        api_key = os.environ.get("API_KEY")
+        api_key = "pk_82caa2b999f54c56ad83bf7e46409fd2"
+        # api_key = os.environ.get("API_KEY")
         url = f"https://cloud.iexapis.com/stable/stock/{urllib.parse.quote_plus(symbol)}/quote?token={api_key}"
         response = requests.get(url)
         response.raise_for_status()
@@ -62,3 +63,10 @@ def lookup(symbol):
 def usd(value):
     """Format value as USD."""
     return f"${value:,.2f}"
+
+# API key = pk_82caa2b999f54c56ad83bf7e46409fd2
+# export API_KEY=pk_82caa2b999f54c56ad83bf7e46409fd2
+# set API_KEY=pk_82caa2b999f54c56ad83bf7e46409fd2
+# py -m venv env
+# env\Scripts\activate
+# FLASK_ENV = development

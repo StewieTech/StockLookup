@@ -266,9 +266,4 @@ if __name__ == '__main__':
 # INSERT the new user into users, storing a hash of the user’s password, not the password itself. Hash the user’s password with generate_password_hash Odds are you’ll want to create a new template (e.g., register.html) that’s quite similar to login.html.
 # Once the user is registered, you may either automatically log in the user or bring the user to a page where they can log in themselves.
 
-# API key = pk_82caa2b999f54c56ad83bf7e46409fd2
-# export API_KEY=pk_82caa2b999f54c56ad83bf7e46409fd2
-# set API_KEY=pk_82caa2b999f54c56ad83bf7e46409fd2
-# py -m venv env
-# env\Scripts\activate
-# FLASK_ENV = development
+
