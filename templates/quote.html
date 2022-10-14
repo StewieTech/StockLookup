@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    quote
+{% endblock %}
+
+{% block main %}
+<form action="/quote" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="quote" name="quote" placeholder="Stock Quote" type="text" required>
+
+    </div>
+
+</div>
+<button class="btn btn-primary" type="submit" style="float": right; >Submit</button>
+</form>
+
+<div class="section">
+
+    <h2>All Stock Quotes</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+            <tr>
+                <td>{{ QnameR }}</td>
+                <td>{{ QpriceR }}</td>
+                <td>{{ QsymbolR }}</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for quote in quotes %}
+                <tr>
+                    <td>{{ quote.name }}</td>
+                    <td>{{ person.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+            <!-- TODO: Loop through the database entries to display them in this table -->
+
+    </table>
+</div>
+
+{% endblock %}
